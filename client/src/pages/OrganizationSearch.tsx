@@ -37,7 +37,9 @@ export default function OrganizationSearch() {
   };
 
   const handleFilterChange = (key: keyof SearchFilters, value: string) => {
-    setFilters(prev => ({ ...prev, [key]: value }));
+    // Convert "any" back to empty string for API calls
+    const apiValue = value === "any" ? "" : value;
+    setFilters(prev => ({ ...prev, [key]: apiValue }));
   };
 
   const clearFilters = () => {
@@ -77,7 +79,7 @@ export default function OrganizationSearch() {
                     <SelectValue placeholder="Any Specialty" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Any Specialty</SelectItem>
+                    <SelectItem value="any">Any Specialty</SelectItem>
                     <SelectItem value="Emergency Medicine">Emergency Medicine</SelectItem>
                     <SelectItem value="Surgery">Surgery</SelectItem>
                     <SelectItem value="Mental Health">Mental Health</SelectItem>
@@ -97,7 +99,7 @@ export default function OrganizationSearch() {
                     <SelectValue placeholder="Any Region" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Any Region</SelectItem>
+                    <SelectItem value="any">Any Region</SelectItem>
                     <SelectItem value="Africa">Africa</SelectItem>
                     <SelectItem value="Asia">Asia</SelectItem>
                     <SelectItem value="Americas">Americas</SelectItem>
@@ -115,7 +117,7 @@ export default function OrganizationSearch() {
                     <SelectValue placeholder="Any Language" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Any Language</SelectItem>
+                    <SelectItem value="any">Any Language</SelectItem>
                     <SelectItem value="English">English</SelectItem>
                     <SelectItem value="French">French</SelectItem>
                     <SelectItem value="Spanish">Spanish</SelectItem>
@@ -134,7 +136,7 @@ export default function OrganizationSearch() {
                     <SelectValue placeholder="All Statuses" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Statuses</SelectItem>
+                    <SelectItem value="any">All Statuses</SelectItem>
                     <SelectItem value="available">Available Only</SelectItem>
                     <SelectItem value="pending_documentation">Pending Documentation</SelectItem>
                   </SelectContent>

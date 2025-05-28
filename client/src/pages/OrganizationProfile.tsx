@@ -41,13 +41,13 @@ export default function OrganizationProfile() {
   const form = useForm<OrganizationFormData>({
     resolver: zodResolver(organizationSchema),
     defaultValues: {
-      name: organization?.name || "",
-      type: organization?.type || "",
-      description: organization?.description || "",
-      website: organization?.website || "",
-      contactPerson: organization?.contactPerson || "",
-      contactEmail: organization?.contactEmail || "",
-      country: organization?.country || "",
+      name: (organization as any)?.name || "",
+      type: (organization as any)?.type || "",
+      description: (organization as any)?.description || "",
+      website: (organization as any)?.website || "",
+      contactPerson: (organization as any)?.contactPerson || "",
+      contactEmail: (organization as any)?.contactEmail || "",
+      country: (organization as any)?.country || "",
     },
   });
 
@@ -66,7 +66,7 @@ export default function OrganizationProfile() {
 
   const updateMutation = useMutation({
     mutationFn: (data: OrganizationFormData) => 
-      apiRequest("PUT", `/api/organizations/${organization.id}`, data),
+      apiRequest("PUT", `/api/organizations/${(organization as any).id}`, data),
     onSuccess: () => {
       toast({ title: "Organization profile updated successfully!" });
       queryClient.invalidateQueries({ queryKey: ["/api/organizations/me"] });

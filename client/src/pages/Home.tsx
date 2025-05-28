@@ -64,7 +64,7 @@ export default function Home() {
                       Professional Profile
                     </Button>
                   </Link>
-                  <Link href="/profile">
+                  <Link href="/organization">
                     <Button className="bg-orange-600 hover:bg-orange-700">
                       <Building className="mr-2 h-4 w-4" />
                       Organization Profile
