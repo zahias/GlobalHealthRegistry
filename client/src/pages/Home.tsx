@@ -162,44 +162,6 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Recent Deployment Opportunities */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Recent Deployment Opportunities</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-red-50 rounded-lg border border-red-200">
-                    <div>
-                      <h3 className="font-semibold text-red-900">Emergency Medical Response - Gaza</h3>
-                      <p className="text-sm text-red-700">Seeking trauma surgeons and emergency physicians</p>
-                      <p className="text-xs text-red-600 mt-1">Posted 2 hours ago by MSF</p>
-                    </div>
-                    <Badge variant="destructive">URGENT</Badge>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-orange-50 rounded-lg border border-orange-200">
-                    <div>
-                      <h3 className="font-semibold text-orange-900">Refugee Health Services - Jordan</h3>
-                      <p className="text-sm text-orange-700">Primary care physicians and nurses needed</p>
-                      <p className="text-xs text-orange-600 mt-1">Posted 1 day ago by UNHCR</p>
-                    </div>
-                    <Badge className="bg-orange-100 text-orange-800">ACTIVE</Badge>
-                  </div>
-                  <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg border border-blue-200">
-                    <div>
-                      <h3 className="font-semibold text-blue-900">Public Health Program - Lebanon</h3>
-                      <p className="text-sm text-blue-700">Epidemiologists and health educators</p>
-                      <p className="text-xs text-blue-600 mt-1">Posted 3 days ago by WHO</p>
-                    </div>
-                    <Badge className="bg-blue-100 text-blue-800">ONGOING</Badge>
-                  </div>
-                  <Link href="/search">
-                    <Button className="w-full">View All Opportunities</Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Platform Statistics */}
             <Card>
               <CardHeader>
@@ -271,55 +233,14 @@ export default function Home() {
               </Card>
             )}
 
-            {/* Quick Stats */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Quick Stats</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Profile Views</span>
-                    <span className="font-semibold">127</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Applications Sent</span>
-                    <span className="font-semibold">8</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Response Rate</span>
-                    <span className="font-semibold text-green-600">75%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Training Completed</span>
-                    <span className="font-semibold">3 courses</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Recent Activity */}
             <Card>
               <CardHeader>
                 <CardTitle>Recent Activity</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-600">Profile updated</span>
-                    <span className="text-gray-400 text-xs">2 days ago</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span className="text-gray-600">Applied to MSF deployment</span>
-                    <span className="text-gray-400 text-xs">1 week ago</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <span className="text-gray-600">Completed training course</span>
-                    <span className="text-gray-400 text-xs">2 weeks ago</span>
-                  </div>
+                <div className="space-y-3 text-sm text-gray-600">
+                  <div>No recent activity</div>
                 </div>
               </CardContent>
             </Card>
