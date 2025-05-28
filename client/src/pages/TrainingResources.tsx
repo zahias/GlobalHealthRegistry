@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { PublicNavigation } from "@/components/PublicNavigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { GraduationCap, Clock, Users, Star, CheckCircle } from "lucide-react";
 
 export default function TrainingResources() {
-  const { user } = useAuth();
+  const { user, isAuthenticated } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
 
@@ -59,7 +60,7 @@ export default function TrainingResources() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navigation />
+      {isAuthenticated ? <Navigation /> : <PublicNavigation />}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
