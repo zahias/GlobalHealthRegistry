@@ -2,10 +2,11 @@ import { useAuth } from "@/hooks/useAuth";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { StatusBadge } from "@/components/StatusBadge";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { UserRound, Building, MessageSquare, GraduationCap, Search, Users, TrendingUp } from "lucide-react";
+import { UserRound, Building, MessageSquare, GraduationCap, Search, Users, TrendingUp, AlertTriangle } from "lucide-react";
 
 export default function Home() {
   const { user, isLoading } = useAuth();
@@ -128,30 +129,38 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Professional Status (for professionals) */}
-            {isProfessional && hasProfile && (
-              <Card>
-                <CardHeader>
-                  <CardTitle>Your Status</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between">
+            {/* Emergency Response Center */}
+            <Card className="border-red-200 bg-red-50">
+              <CardHeader>
+                <CardTitle className="text-red-900 flex items-center">
+                  <AlertTriangle className="mr-2 h-5 w-5" />
+                  Emergency Response Center
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between p-3 bg-white rounded-lg border border-red-200">
                     <div>
-                      <StatusBadge status={userProfile.profileData?.availabilityStatus || 'pending_documentation'} />
-                      <p className="text-sm text-gray-600 mt-2">
-                        {userProfile.profileData?.availabilityStatus === 'available' && "You're visible to organizations seeking professionals"}
-                        {userProfile.profileData?.availabilityStatus === 'pending_documentation' && "Complete verification to become available"}
-                        {userProfile.profileData?.availabilityStatus === 'not_available' && "Update your status when ready for deployment"}
-                        {userProfile.profileData?.availabilityStatus === 'deployment_in_progress' && "Currently on active deployment"}
-                      </p>
+                      <h3 className="font-semibold text-red-900">Gaza Health Crisis</h3>
+                      <p className="text-sm text-red-700">Urgent need for emergency medical professionals</p>
                     </div>
-                    <Link href="/profile">
-                      <Button variant="outline">Update Status</Button>
-                    </Link>
+                    <Badge variant="destructive">URGENT</Badge>
                   </div>
-                </CardContent>
-              </Card>
-            )}
+                  <div className="flex items-center justify-between p-3 bg-white rounded-lg border border-orange-200">
+                    <div>
+                      <h3 className="font-semibold text-orange-900">Turkey Earthquake Response</h3>
+                      <p className="text-sm text-orange-700">Ongoing rehabilitation support needed</p>
+                    </div>
+                    <Badge variant="secondary">ACTIVE</Badge>
+                  </div>
+                  <Link href="/search">
+                    <Button className="w-full bg-red-600 hover:bg-red-700">
+                      View Emergency Deployments
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Platform Statistics */}
             <Card>
