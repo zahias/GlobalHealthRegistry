@@ -11,6 +11,7 @@ import OrganizationProfile from "@/pages/OrganizationProfile";
 import OrganizationSearch from "@/pages/OrganizationSearch";
 import Messages from "@/pages/Messages";
 import TrainingResources from "@/pages/TrainingResources";
+import ProfessionalDetails from "@/pages/ProfessionalDetails";
 import ForProfessionals from "@/pages/ForProfessionals";
 import ForOrganizations from "@/pages/ForOrganizations";
 import About from "@/pages/About";
