@@ -24,7 +24,7 @@ export default function ProfessionalDetails() {
   const { id } = useParams();
 
   const { data: professional, isLoading } = useQuery({
-    queryKey: ['/api/professionals', id],
+    queryKey: [`/api/professionals/${id}`],
   });
 
   const { data: user } = useQuery({
