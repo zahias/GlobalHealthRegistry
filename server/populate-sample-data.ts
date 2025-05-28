@@ -107,7 +107,7 @@ async function populateSampleData() {
       certifications: ["ACLS", "PALS", "ATLS"],
       experience: 8,
       availabilityStatus: "available",
-      availableFrom: "2025-06-01",
+      availableFrom: new Date("2025-06-01"),
       preferredDuration: "3-6 months", 
       licenseVerified: true,
       bio: "Experienced emergency physician with extensive trauma experience in conflict zones. Previously deployed with MSF in Syria and Yemen."
@@ -119,7 +119,7 @@ async function populateSampleData() {
       certifications: ["Licensed Clinical Psychologist", "PTSD Specialist"],
       experience: 12,
       availabilityStatus: "available",
-      availableFrom: "2025-07-15",
+      availableFrom: new Date("2025-07-15"),
       preferredDuration: "6-12 months",
       licenseVerified: true, 
       bio: "Clinical psychologist specializing in trauma and PTSD treatment. Fluent in Arabic with experience working with refugee populations."
@@ -131,7 +131,7 @@ async function populateSampleData() {
       certifications: ["Board Certified Pediatrician", "NRP"],
       experience: 6,
       availabilityStatus: "pending_documentation",
-      availableFrom: "2025-08-01",
+      availableFrom: new Date("2025-08-01"),
       preferredDuration: "3-6 months",
       licenseVerified: false,
       bio: "Pediatrician with focus on neonatal care and childhood malnutrition. Experience in Brazil and Haiti emergency responses."
@@ -143,7 +143,7 @@ async function populateSampleData() {
       certifications: ["Board Certified Surgeon", "ATLS"],
       experience: 15,
       availabilityStatus: "available",
-      availableFrom: "2025-05-15", 
+      availableFrom: new Date("2025-05-15"), 
       preferredDuration: "12+ months",
       licenseVerified: true,
       bio: "Orthopedic surgeon with 15 years of humanitarian experience. Led surgical teams in Rwanda, DRC, and Sudan."
@@ -155,7 +155,7 @@ async function populateSampleData() {
       certifications: ["MPH", "Epidemiologist"],
       experience: 10,
       availabilityStatus: "available",
-      availableFrom: "2025-06-30",
+      availableFrom: new Date("2025-06-30"),
       preferredDuration: "6-12 months",
       licenseVerified: true,
       bio: "Public health specialist with expertise in outbreak investigation and disease surveillance. WHO consultant."
@@ -179,7 +179,7 @@ async function populateSampleData() {
       certifications: ["RN", "CEN", "CCRN"],
       experience: 7,
       availabilityStatus: "available",
-      availableFrom: "2025-07-01",
+      availableFrom: new Date("2025-07-01"),
       preferredDuration: "3-6 months",
       licenseVerified: true,
       bio: "Emergency room nurse with critical care experience. Bilingual English-Mandarin speaker with Asia deployment experience."
@@ -191,7 +191,7 @@ async function populateSampleData() {
       certifications: ["Board Certified OB/GYN", "Emergency Obstetric Care"],
       experience: 11,
       availabilityStatus: "available", 
-      availableFrom: "2025-06-15",
+      availableFrom: new Date("2025-06-15"),
       preferredDuration: "6-12 months",
       licenseVerified: true,
       bio: "OB/GYN specialist with experience in maternal health programs. Previously worked in Afghanistan and Pakistan."
