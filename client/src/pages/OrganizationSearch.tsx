@@ -74,7 +74,7 @@ export default function OrganizationSearch() {
             <div className="grid md:grid-cols-4 gap-4 mb-4">
               <div>
                 <Label htmlFor="specialty">Specialty Required</Label>
-                <Select value={filters.specialty} onValueChange={(value) => handleFilterChange('specialty', value)}>
+                <Select value={filters.specialty || "any"} onValueChange={(value) => handleFilterChange('specialty', value)}>
                   <SelectTrigger>
                     <SelectValue placeholder="Any Specialty" />
                   </SelectTrigger>
@@ -94,7 +94,7 @@ export default function OrganizationSearch() {
               
               <div>
                 <Label htmlFor="region">Geographic Region</Label>
-                <Select value={filters.region} onValueChange={(value) => handleFilterChange('region', value)}>
+                <Select value={filters.region || "any"} onValueChange={(value) => handleFilterChange('region', value)}>
                   <SelectTrigger>
                     <SelectValue placeholder="Any Region" />
                   </SelectTrigger>
@@ -112,7 +112,7 @@ export default function OrganizationSearch() {
               
               <div>
                 <Label htmlFor="language">Language Requirements</Label>
-                <Select value={filters.language} onValueChange={(value) => handleFilterChange('language', value)}>
+                <Select value={filters.language || "any"} onValueChange={(value) => handleFilterChange('language', value)}>
                   <SelectTrigger>
                     <SelectValue placeholder="Any Language" />
                   </SelectTrigger>
@@ -131,7 +131,7 @@ export default function OrganizationSearch() {
               
               <div>
                 <Label htmlFor="availability">Availability Status</Label>
-                <Select value={filters.availability} onValueChange={(value) => handleFilterChange('availability', value)}>
+                <Select value={filters.availability || "any"} onValueChange={(value) => handleFilterChange('availability', value)}>
                   <SelectTrigger>
                     <SelectValue placeholder="All Statuses" />
                   </SelectTrigger>
