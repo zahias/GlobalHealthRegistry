@@ -35,56 +35,56 @@ export function Navigation() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <Link href="/">
-                <a className={`px-3 py-2 rounded-md text-sm font-medium ${
+                <span className={`px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
                   isActive('/') 
                     ? 'text-primary bg-blue-50' 
                     : 'text-gray-600 hover:text-primary'
                 }`}>
                   Dashboard
-                </a>
+                </span>
               </Link>
               
               <Link href="/profile">
-                <a className={`px-3 py-2 rounded-md text-sm font-medium ${
+                <span className={`px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
                   isActive('/profile') 
                     ? 'text-primary bg-blue-50' 
                     : 'text-gray-600 hover:text-primary'
                 }`}>
                   Profile
-                </a>
+                </span>
               </Link>
               
               <Link href="/search">
-                <a className={`px-3 py-2 rounded-md text-sm font-medium ${
+                <span className={`px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
                   isActive('/search') 
                     ? 'text-primary bg-blue-50' 
                     : 'text-gray-600 hover:text-primary'
                 }`}>
                   <Search className="inline h-4 w-4 mr-1" />
                   Search
-                </a>
+                </span>
               </Link>
               
               <Link href="/messages">
-                <a className={`px-3 py-2 rounded-md text-sm font-medium ${
+                <span className={`px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
                   isActive('/messages') 
                     ? 'text-primary bg-blue-50' 
                     : 'text-gray-600 hover:text-primary'
                 }`}>
                   <MessageSquare className="inline h-4 w-4 mr-1" />
                   Messages
-                </a>
+                </span>
               </Link>
               
               <Link href="/training">
-                <a className={`px-3 py-2 rounded-md text-sm font-medium ${
+                <span className={`px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
                   isActive('/training') 
                     ? 'text-primary bg-blue-50' 
                     : 'text-gray-600 hover:text-primary'
                 }`}>
                   <GraduationCap className="inline h-4 w-4 mr-1" />
                   Training
-                </a>
+                </span>
               </Link>
             </div>
           </div>
@@ -94,11 +94,11 @@ export function Navigation() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="flex items-center space-x-2">
                   <img
-                    src={user?.profileImageUrl || '/api/placeholder/32/32'}
+                    src={(user as any)?.profileImageUrl || '/api/placeholder/32/32'}
                     alt="Profile"
                     className="w-8 h-8 rounded-full"
                   />
-                  <span className="hidden md:block">{user?.firstName || 'User'}</span>
+                  <span className="hidden md:block">{(user as any)?.firstName || 'User'}</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">

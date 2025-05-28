@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { UserRound, Building, Check, Clock, X, Plane, Shield, Users } from "lucide-react";
+import aubLogo from "@assets/ghi_logo-345x198-1.png";
 
 export default function Landing() {
   const handleSignIn = () => {
@@ -14,7 +15,7 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <UserRound className="text-primary text-2xl mr-3" />
+              <img src={aubLogo} alt="AUB Global Health Institute" className="h-12 mr-4" />
               <span className="text-xl font-bold text-gray-900">Global Health Registry</span>
             </div>
             <div className="hidden md:block">
@@ -53,9 +54,9 @@ export default function Landing() {
                   <UserRound className="mr-2 h-5 w-5" />
                   Register as Professional
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" onClick={handleSignIn}>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary bg-transparent" onClick={handleSignIn}>
                   <Building className="mr-2 h-5 w-5" />
-                  Register Organization
+                  <span className="text-white hover:text-primary">Register Organization</span>
                 </Button>
               </div>
             </div>

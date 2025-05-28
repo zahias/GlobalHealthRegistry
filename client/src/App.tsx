@@ -7,6 +7,7 @@ import { useAuth } from "@/hooks/useAuth";
 import Landing from "@/pages/Landing";
 import Home from "@/pages/Home";
 import ProfessionalProfile from "@/pages/ProfessionalProfile";
+import OrganizationProfile from "@/pages/OrganizationProfile";
 import OrganizationSearch from "@/pages/OrganizationSearch";
 import Messages from "@/pages/Messages";
 import TrainingResources from "@/pages/TrainingResources";
