@@ -2,12 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Building, Users, Search, Shield, Globe, Award } from "lucide-react";
 import { Link } from "wouter";
-import { Navigation } from "@/components/Navigation";
+import { PublicNavigation } from "@/components/PublicNavigation";
 
 export default function ForOrganizations() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
-      <Navigation />
+      <PublicNavigation />
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

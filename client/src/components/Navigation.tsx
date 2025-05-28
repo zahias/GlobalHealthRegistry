@@ -86,36 +86,6 @@ export function Navigation() {
                   Training
                 </span>
               </Link>
-              
-              <Link href="/for-professionals">
-                <span className={`px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
-                  isActive('/for-professionals') 
-                    ? 'text-primary bg-blue-50' 
-                    : 'text-gray-600 hover:text-primary'
-                }`}>
-                  For Professionals
-                </span>
-              </Link>
-              
-              <Link href="/for-organizations">
-                <span className={`px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
-                  isActive('/for-organizations') 
-                    ? 'text-primary bg-blue-50' 
-                    : 'text-gray-600 hover:text-primary'
-                }`}>
-                  For Organizations
-                </span>
-              </Link>
-              
-              <Link href="/about">
-                <span className={`px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
-                  isActive('/about') 
-                    ? 'text-primary bg-blue-50' 
-                    : 'text-gray-600 hover:text-primary'
-                }`}>
-                  About
-                </span>
-              </Link>
             </div>
           </div>
           

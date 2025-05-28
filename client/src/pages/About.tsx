@@ -1,12 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Globe, Users, Award, Target, Shield } from "lucide-react";
-import { Navigation } from "@/components/Navigation";
+import { PublicNavigation } from "@/components/PublicNavigation";
 import ghiLogoPath from "@assets/ghi_logo-345x198-1.png";
 
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      <Navigation />
+      <PublicNavigation />
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
