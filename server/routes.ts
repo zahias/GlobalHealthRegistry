@@ -117,6 +117,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Get individual professional by ID
+  app.get('/api/professionals/:id', async (req, res) => {
+    try {
+      const professionalId = parseInt(req.params.id);
+      const professional = await storage.getProfessionalById(professionalId);
+      
+      if (!professional) {
+        return res.status(404).json({ message: "Professional not found" });
+      }
+      
+      res.json(professional);
+    } catch (error) {
+      console.error("Error fetching professional:", error);
+      res.status(500).json({ message: "Failed to fetch professional" });
+    }
+  });
+
   // Organization routes
   app.post('/api/organizations', isAuthenticated, async (req: any, res) => {
     try {

@@ -36,6 +36,7 @@ function Router() {
           <Route path="/profile" component={ProfessionalProfile} />
           <Route path="/organization" component={OrganizationProfile} />
           <Route path="/search" component={OrganizationSearch} />
+          <Route path="/professional/:id" component={ProfessionalDetails} />
           <Route path="/messages" component={Messages} />
           <Route path="/training" component={TrainingResources} />
           <Route path="/for-professionals" component={ForProfessionals} />
