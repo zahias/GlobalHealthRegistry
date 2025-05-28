@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { UserRound, Building, Check, Clock, X, Plane, Shield, Users } from "lucide-react";
+import { Link } from "wouter";
 import aubLogo from "@assets/ghi_logo-345x198-1.png";
 
 export default function Landing() {
@@ -20,10 +21,18 @@ export default function Landing() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                <a href="#professionals" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">For Professionals</a>
-                <a href="#organizations" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">For Organizations</a>
-                <a href="#training" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Training Resources</a>
-                <a href="#about" className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">About</a>
+                <Link href="/for-professionals">
+                  <span className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium cursor-pointer">For Professionals</span>
+                </Link>
+                <Link href="/for-organizations">
+                  <span className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium cursor-pointer">For Organizations</span>
+                </Link>
+                <Link href="/training">
+                  <span className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Training Resources</span>
+                </Link>
+                <Link href="/about">
+                  <span className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium cursor-pointer">About</span>
+                </Link>
               </div>
             </div>
             <div className="flex items-center space-x-4">
