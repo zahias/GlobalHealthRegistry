@@ -1,0 +1,254 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Global Health Registry
+Connecting Skilled Professionals with Humanitarian Response Needs
+May 28, 2025
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@ghiaub
+ 
+
+
+
+
+Why is it Important?
+
+
+Delays in mobilizing qualified healthcare staff = preventable deaths
+
+
+
+No central, verified platform to connect professionals with humanitarian organizations
+
+
+
+Fragmented data and lack of coordinated deployment mechanisms
+
+
+
+Ad hoc rosters limit local ownership, reinforcing aid dependence and hindering capacity building
+ 
+ 
+
+
+
+
+
+Objective
+
+
+To establish a secure, global roster of licensed and experienced healthcare professionals that serves as a facilitating platform for connecting individuals to organizations needing skilled personnel in humanitarian and conflict settings
+ 
+
+
+
+
+
+
+
+
+
+
+AIMS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+What is it?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A web-based registry for professionals interested in working in humanitarian or conflict zones A connection point — not a deploying body
+A platform for profile visibility, verification, and availability tracking
+ 
+
+
+
+
+ 
+Scope
+
+ 
+In Scope:
+ 
+
+
+
+Out of Scope:
+ 
+
+
+Skill-based profile search	Direct deployment or contracting
+
+
+ 
+Verified registration and license documentation Availability tracking
+Professional status badges (e.g., Available, Not Available)
+Training	links	and	continuing	education resources
+Secure messaging and alerts
+ 
+Clinical	training	delivery	(only	linking	to resources)
+Visa/travel arrangements or insurance handling On-site security or field logistics
+Payment processing between parties
+ 
+Target Users
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Organizations
+
+
+
+Administrative Bodies
+ 
+NGOs (local and international)
+Government health and crisis response agencies Humanitarian hospitals and field units
+
+
+
+Deployment coordination teams Ministries of Health Academic/humanitarian networks
+ 
+
+
+
+
+What the Registry Includes?
+
+
+
+Each Individual Profile Will Show:
+Specialty (e.g. surgery, mental health)
+Training & certifications (e.g. ATLS, conflict medicine) Languages & regional experience
+Availability window
+Past deployments (if any) Deployment Status Badge:
+Available for Deployment – Professional has indicated current availability
+Not Available – Temporarily unavailable due to personal, professional, or legal constraints
+Pending Documentation – Awaiting required documents or verification before deployment matching
+Deployment in Progress – Currently deployed through the registry or others
+ 
+
+
+
+
+What the Registry Includes?
+
+
+
+
+
+
+
+
+
+
+
+
+System Features:
+License & reference verification Secure, cloud-based platform
+Accessible to authorized organizations only
+Integrated with training and conflict medicine programs (e.g. CCM)
+Automated alerts notify users about new roles, changes in availability, or deployment status
+ 
+
+
+
+
+Professional registration, licensing and credentialing
+
+
+
+
+All healthcare professionals listed in the registry are required to be licensed and registered to practice in their home country
+Licenses must be valid and aligned with the scope of responsibilities assigned during deployment
+Professionals should operate within their certified scope of practice, ensuring they are assigned tasks appropriate to their qualifications and experience
+ 
+
+
+
+
+Data Privacy & Consent Protocols
+
+
+
+
+No personal identifiers are collected (e.g., no birthdates or addresses)
+Only professional data is stored: licenses, credentials, languages, passport validity All users must give informed consent for how data is stored, shared, and used
+ 
+
+
+
+
+Deployment Process & Logistics
+
+
+Workflow: Request → Match → Confirm → Deploy
+
+Registry facilitates: skills matching, availability, and notification
+
+
+Organizations manage: travel, insurance, visas, legal responsibility
+
+Optional pre-deployment modules: cultural competence, safety protocols, ethics in conflict zones
