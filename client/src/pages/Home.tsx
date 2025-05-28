@@ -162,6 +162,66 @@ export default function Home() {
               </CardContent>
             </Card>
 
+            {/* Current Deployment Opportunities */}
+            <Card className="mb-8">
+              <CardHeader>
+                <CardTitle className="text-orange-900 flex items-center">
+                  <Building className="mr-2 h-5 w-5" />
+                  Active Deployment Opportunities
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-blue-50 rounded-lg border border-blue-200">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-blue-900">Emergency Medicine Team - Jordan</h3>
+                      <p className="text-sm text-blue-700">Médecins Sans Frontières seeking 3 emergency physicians for refugee camp</p>
+                      <div className="flex space-x-4 mt-2 text-xs text-blue-600">
+                        <span>Duration: 6 months</span>
+                        <span>Languages: Arabic, English</span>
+                        <span>Start: June 2025</span>
+                      </div>
+                    </div>
+                    <Badge className="bg-blue-600">URGENT</Badge>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg border border-green-200">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-green-900">Mental Health Support - Lebanon</h3>
+                      <p className="text-sm text-green-700">WHO seeking mental health professionals for trauma response</p>
+                      <div className="flex space-x-4 mt-2 text-xs text-green-600">
+                        <span>Duration: 3-6 months</span>
+                        <span>Languages: Arabic, French</span>
+                        <span>Start: July 2025</span>
+                      </div>
+                    </div>
+                    <Badge variant="secondary">OPEN</Badge>
+                  </div>
+                  
+                  <div className="flex items-center justify-between p-4 bg-purple-50 rounded-lg border border-purple-200">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-purple-900">Surgical Team - Sudan</h3>
+                      <p className="text-sm text-purple-700">International Red Cross needs orthopedic surgeons</p>
+                      <div className="flex space-x-4 mt-2 text-xs text-purple-600">
+                        <span>Duration: 12+ months</span>
+                        <span>Languages: English, Arabic</span>
+                        <span>Start: August 2025</span>
+                      </div>
+                    </div>
+                    <Badge variant="outline">REVIEWING</Badge>
+                  </div>
+                </div>
+                
+                <div className="mt-6 pt-4 border-t border-gray-200">
+                  <Link href="/search">
+                    <Button className="w-full bg-orange-600 hover:bg-orange-700">
+                      View All Opportunities
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Platform Statistics */}
             <Card>
               <CardHeader>
@@ -173,22 +233,22 @@ export default function Home() {
                     <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mx-auto mb-2">
                       <Users className="h-6 w-6 text-primary" />
                     </div>
-                    <div className="text-2xl font-bold text-gray-900">2,847</div>
+                    <div className="text-2xl font-bold text-gray-900">250+</div>
                     <div className="text-sm text-gray-600">Active Professionals</div>
                   </div>
                   <div className="text-center">
                     <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mx-auto mb-2">
                       <Building className="h-6 w-6 text-green-600" />
                     </div>
-                    <div className="text-2xl font-bold text-gray-900">156</div>
+                    <div className="text-2xl font-bold text-gray-900">45</div>
                     <div className="text-sm text-gray-600">Verified Organizations</div>
                   </div>
                   <div className="text-center">
                     <div className="flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mx-auto mb-2">
                       <TrendingUp className="h-6 w-6 text-orange-600" />
                     </div>
-                    <div className="text-2xl font-bold text-gray-900">73</div>
-                    <div className="text-sm text-gray-600">Current Deployments</div>
+                    <div className="text-2xl font-bold text-gray-900">30</div>
+                    <div className="text-sm text-gray-600">Countries Served</div>
                   </div>
                 </div>
               </CardContent>
