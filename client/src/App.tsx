@@ -14,6 +14,7 @@ import TrainingResources from "@/pages/TrainingResources";
 import ProfessionalDetails from "@/pages/ProfessionalDetails";
 import ForProfessionals from "@/pages/ForProfessionals";
 import ForOrganizations from "@/pages/ForOrganizations";
+import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -27,6 +28,7 @@ function Router() {
           <Route path="/for-professionals" component={ForProfessionals} />
           <Route path="/for-organizations" component={ForOrganizations} />
           <Route path="/training" component={TrainingResources} />
+          <Route path="/about" component={About} />
         </>
       ) : (
         <>
@@ -39,6 +41,7 @@ function Router() {
           <Route path="/training" component={TrainingResources} />
           <Route path="/for-professionals" component={ForProfessionals} />
           <Route path="/for-organizations" component={ForOrganizations} />
+          <Route path="/about" component={About} />
         </>
       )}
       <Route component={NotFound} />
