@@ -6,7 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { StatusBadge } from "@/components/StatusBadge";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { UserRound, Building, MessageSquare, GraduationCap, Search, Users, TrendingUp, AlertTriangle } from "lucide-react";
+import { UserRound, Building, MessageSquare, GraduationCap, Search, Users, TrendingUp, AlertTriangle, Heart, Shield, Globe, Target } from "lucide-react";
+import ghiLogoPath from "@assets/ghi_logo-345x198-1.png";
 
 export default function Home() {
   const { user, isLoading } = useAuth();
@@ -76,6 +77,127 @@ export default function Home() {
             </CardContent>
           </Card>
         )}
+
+        {/* About Section from About page */}
+        <div className="mb-16">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <img 
+              src={ghiLogoPath} 
+              alt="AUB Global Health Institute" 
+              className="mx-auto h-24 mb-6"
+            />
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              About the Global Health Registry
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A initiative by the American University of Beirut Global Health Institute 
+              to connect skilled healthcare professionals with humanitarian organizations 
+              serving in crisis and conflict zones worldwide.
+            </p>
+          </div>
+
+          {/* Mission Section */}
+          <Card className="mb-16 border-orange-200">
+            <CardHeader>
+              <CardTitle className="text-2xl text-orange-900 flex items-center">
+                <Target className="h-8 w-8 mr-3" />
+                Our Mission
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The Global Health Registry was created to address the critical shortage of qualified 
+                healthcare professionals in humanitarian crises. By maintaining a comprehensive database 
+                of verified medical personnel and facilitating connections with reputable humanitarian 
+                organizations, we aim to ensure that life-saving medical care reaches those who need it most, 
+                when they need it most.
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Values Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <Card className="border-orange-200">
+              <CardHeader>
+                <Heart className="h-8 w-8 text-red-600 mb-2" />
+                <CardTitle className="text-orange-900">Humanitarian Excellence</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  We are committed to the highest standards of humanitarian aid, ensuring dignity, 
+                  respect, and quality care for all people affected by crises.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-orange-200">
+              <CardHeader>
+                <Shield className="h-8 w-8 text-blue-600 mb-2" />
+                <CardTitle className="text-orange-900">Professional Connection</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  We connect qualified healthcare professionals with trusted humanitarian organizations 
+                  to ensure effective and ethical deployment in crisis zones.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-orange-200">
+              <CardHeader>
+                <Globe className="h-8 w-8 text-green-600 mb-2" />
+                <CardTitle className="text-orange-900">Global Collaboration</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  We foster partnerships between healthcare professionals, humanitarian organizations, 
+                  and academic institutions worldwide to maximize impact.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* AUB GHI Section */}
+          <Card className="mb-16 border-orange-200">
+            <CardHeader>
+              <CardTitle className="text-2xl text-orange-900">
+                American University of Beirut Global Health Institute
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <p className="text-gray-700 mb-4">
+                    The AUB Global Health Institute is a leading center for global health research, 
+                    education, and practice in the Middle East and beyond. Located at the crossroads 
+                    of three continents, AUB-GHI is uniquely positioned to address global health 
+                    challenges affecting vulnerable populations.
+                  </p>
+                  <p className="text-gray-700">
+                    Since its establishment, the institute has been at the forefront of humanitarian 
+                    health responses, training the next generation of global health leaders, and 
+                    conducting research that informs policy and practice worldwide.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <Building className="h-6 w-6 text-orange-600 mr-3" />
+                    <span className="text-gray-700">WHO Collaborating Center</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Users className="h-6 w-6 text-orange-600 mr-3" />
+                    <span className="text-gray-700">500+ Alumni in Humanitarian Work</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Globe className="h-6 w-6 text-orange-600 mr-3" />
+                    <span className="text-gray-700">Programs in 20+ Countries</span>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Content */}
