@@ -83,7 +83,7 @@ export default function OrganizationDashboard() {
                       </Button>
                     </Link>
                     
-                    <Link href="/deployments">
+                    <Link href="/post-opportunity">
                       <Button variant="outline" className="w-full h-20 flex flex-col">
                         <Plus className="h-6 w-6 mb-2" />
                         <span className="text-sm">Post Opportunity</span>

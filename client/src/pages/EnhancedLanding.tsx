@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { SuccessStoriesCarousel } from "@/components/SuccessStoriesCarousel";
-import { DeploymentMap } from "@/components/DeploymentMap";
 import { 
   UserRound, 
   Building, 
@@ -211,88 +211,75 @@ export default function EnhancedLanding() {
         </div>
       </section>
 
-      {/* Active Deployment Locations */}
+      {/* Current Crisis Areas - Alternative Visualization */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Current Crisis Response Areas</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Where Help is Needed Most</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See where humanitarian assistance is needed most right now
+              Current humanitarian crises requiring immediate medical expertise
             </p>
           </div>
-          <DeploymentMap />
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card className="border-red-200 bg-red-50">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <Badge className="bg-red-600 text-white">CRITICAL</Badge>
+                  <div className="text-2xl font-bold text-red-700">12</div>
+                </div>
+                <h3 className="text-lg font-semibold text-red-900 mb-2">Gaza Strip</h3>
+                <p className="text-red-700 text-sm mb-3">Emergency medical response needed for trauma care and surgical support</p>
+                <div className="text-xs text-red-600">
+                  <div>• Emergency physicians required</div>
+                  <div>• Surgical specialists needed</div>
+                  <div>• Arabic/English speaking</div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-orange-200 bg-orange-50">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <Badge className="bg-orange-600 text-white">HIGH</Badge>
+                  <div className="text-2xl font-bold text-orange-700">8</div>
+                </div>
+                <h3 className="text-lg font-semibold text-orange-900 mb-2">Bangladesh</h3>
+                <p className="text-orange-700 text-sm mb-3">Rohingya refugee camps require pediatric and maternal health specialists</p>
+                <div className="text-xs text-orange-600">
+                  <div>• Pediatricians needed</div>
+                  <div>• Maternal health specialists</div>
+                  <div>• Bengali/English speaking</div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-yellow-200 bg-yellow-50">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <Badge className="bg-yellow-600 text-white">MEDIUM</Badge>
+                  <div className="text-2xl font-bold text-yellow-700">5</div>
+                </div>
+                <h3 className="text-lg font-semibold text-yellow-900 mb-2">Sudan</h3>
+                <p className="text-yellow-700 text-sm mb-3">Ongoing conflict zones need general practitioners and mental health support</p>
+                <div className="text-xs text-yellow-600">
+                  <div>• General practitioners</div>
+                  <div>• Mental health specialists</div>
+                  <div>• Arabic/English speaking</div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button onClick={() => window.location.href = "/api/login"} className="bg-blue-600 hover:bg-blue-700">
+              View All Current Opportunities
+            </Button>
+          </div>
         </div>
       </section>
 
-      {/* About AUB Global Health Institute */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">About AUB Global Health Institute</h2>
-          </div>
 
-          {/* Core Values */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="border-red-200 bg-red-50 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
-                <Heart className="text-red-600 h-16 w-16 mx-auto mb-6" />
-                <h4 className="text-xl font-bold text-red-800 mb-4">Humanitarian Excellence</h4>
-                <p className="text-red-700 leading-relaxed">
-                  Committed to the highest standards of humanitarian aid, ensuring dignity, respect, and quality
-                  care for all people affected by crises.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-blue-200 bg-blue-50 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
-                <Shield className="text-blue-600 h-16 w-16 mx-auto mb-6" />
-                <h4 className="text-xl font-bold text-blue-800 mb-4">Professional Integrity</h4>
-                <p className="text-blue-700 leading-relaxed">
-                  Rigorous verification ensures every healthcare professional meets the highest standards of
-                  credentials, experience, and ethical practice.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-green-200 bg-green-50 hover:shadow-lg transition-shadow">
-              <CardContent className="p-8 text-center">
-                <Globe className="text-green-600 h-16 w-16 mx-auto mb-6" />
-                <h4 className="text-xl font-bold text-green-800 mb-4">Global Collaboration</h4>
-                <p className="text-green-700 leading-relaxed">
-                  Fostering partnerships between healthcare professionals, humanitarian organizations, and 
-                  academic institutions worldwide.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* AUB Background */}
-          <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-12 text-center">
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Leading Global Health Innovation</h3>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-4xl mx-auto">
-              At the crossroads of three continents, the AUB Global Health Institute is uniquely positioned to address 
-              global health challenges. As a WHO Collaborating Center with 500+ alumni in humanitarian work and programs 
-              in 20+ countries, we're transforming how healthcare reaches vulnerable populations worldwide.
-            </p>
-            
-            <div className="flex items-center justify-center space-x-12 text-amber-700">
-              <div className="flex items-center">
-                <Users className="h-6 w-6 mr-2" />
-                <span className="font-medium">WHO Collaborating Center</span>
-              </div>
-              <div className="flex items-center">
-                <GraduationCap className="h-6 w-6 mr-2" />
-                <span className="font-medium">500+ Alumni in Humanitarian Work</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="h-6 w-6 mr-2" />
-                <span className="font-medium">Programs in 20+ Countries</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
