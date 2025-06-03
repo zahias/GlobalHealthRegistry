@@ -31,7 +31,8 @@ export const users = pgTable("users", {
   firstName: varchar("first_name"),
   lastName: varchar("last_name"),
   profileImageUrl: varchar("profile_image_url"),
-  userType: varchar("user_type").notNull().default("professional"), // "professional" or "organization"
+  userType: varchar("user_type", { enum: ["professional", "organization"] }),
+  onboardingCompleted: boolean("onboarding_completed").default(false),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
 });
