@@ -132,9 +132,7 @@ export default function Landing() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="flex justify-center items-center mb-6">
-              <img src={aubLogo} alt="AUB Global Health Institute" className="h-16 mr-4" />
-            </div>
+
             <h2 className="text-3xl font-bold mb-4">About the Global Health Registry</h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg">
               A initiative by the American University of Beirut Global Health Institute to connect
@@ -143,99 +141,112 @@ export default function Landing() {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
-                  1
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Professional Registration</h3>
-                  <p className="text-gray-600">Licensed healthcare professionals submit credentials, specialties, and deployment preferences.</p>
+          {/* Our Mission */}
+          <div className="mb-16">
+            <div className="flex items-center mb-6">
+              <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center mr-4">
+                <Heart className="text-white h-5 w-5" />
+              </div>
+              <h3 className="text-2xl font-bold text-red-800">Our Mission</h3>
+            </div>
+            <p className="text-gray-700 text-lg leading-relaxed max-w-5xl">
+              The Global Health Registry was created to address the critical shortage of qualified healthcare professionals in humanitarian crises. By maintaining a comprehensive database of
+              verified medical personnel and facilitating connections with reputable humanitarian organizations, we aim to ensure that life-saving medical care reaches those who need it most,
+              when they need it most.
+            </p>
+          </div>
+
+          {/* Core Values */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <Card className="border-red-200 bg-red-50">
+              <CardContent className="p-6 text-center">
+                <Heart className="text-red-600 h-12 w-12 mx-auto mb-4" />
+                <h4 className="text-xl font-bold text-red-800 mb-3">Humanitarian Excellence</h4>
+                <p className="text-red-700">
+                  We are committed to the highest standards of humanitarian aid, ensuring dignity, respect, and quality
+                  care for all people affected by crises.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-blue-200 bg-blue-50">
+              <CardContent className="p-6 text-center">
+                <Shield className="text-blue-600 h-12 w-12 mx-auto mb-4" />
+                <h4 className="text-xl font-bold text-blue-800 mb-3">Professional Integrity</h4>
+                <p className="text-blue-700">
+                  Every healthcare professional in our registry undergoes
+                  rigorous verification to ensure credentials, experience, and
+                  commitment to ethical practice.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-green-200 bg-green-50">
+              <CardContent className="p-6 text-center">
+                <Globe className="text-green-600 h-12 w-12 mx-auto mb-4" />
+                <h4 className="text-xl font-bold text-green-800 mb-3">Global Collaboration</h4>
+                <p className="text-green-700">
+                  We foster partnerships between healthcare professionals,
+                  humanitarian organizations, and academic institutions
+                  worldwide to maximize impact.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* AUB Global Health Institute */}
+          <div className="bg-white rounded-lg p-8 shadow-lg mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">American University of Beirut Global Health Institute</h3>
+            <p className="text-gray-700 text-lg leading-relaxed mb-6">
+              The AUB Global Health Institute is a leading center for global health research, education, and
+              practice in the Middle East and beyond. At the crossroads of three continents, AUB-GHI is
+              uniquely positioned to address global health challenges affecting vulnerable populations.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed mb-8">
+              Since its establishment, the institute has been at the forefront of humanitarian health responses,
+              training the next generation of global health leaders, and conducting research that informs policy
+              and practice worldwide.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-2">
+                  <Users className="text-amber-600 h-6 w-6 mr-2" />
+                  <span className="text-sm text-gray-600">WHO Collaborating Center</span>
                 </div>
               </div>
-              
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
-                  2
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">License Verification</h3>
-                  <p className="text-gray-600">Automated verification of medical licenses, certifications, and professional standing in home country.</p>
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-2">
+                  <GraduationCap className="text-amber-600 h-6 w-6 mr-2" />
+                  <span className="text-sm text-gray-600">500+ Alumni in Humanitarian Work</span>
                 </div>
               </div>
-              
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
-                  3
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Reference Check</h3>
-                  <p className="text-gray-600">Professional references from colleagues, supervisors, or previous deployment partners.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4 flex-shrink-0">
-                  <Check />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Registry Activation</h3>
-                  <p className="text-gray-600">Verified profiles become searchable by authorized humanitarian organizations worldwide.</p>
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-2">
+                  <MapPin className="text-amber-600 h-6 w-6 mr-2" />
+                  <span className="text-sm text-gray-600">Programs in 20+ Countries</span>
                 </div>
               </div>
             </div>
-            
-            <Card className="shadow-lg">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <Shield className="text-green-600 h-12 w-12 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold mb-2">Verification Dashboard</h3>
-                  <p className="text-gray-600">Track your verification status</p>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <div className="flex items-center">
-                      <Check className="text-green-600 mr-3 h-5 w-5" />
-                      <span className="font-medium">Profile Registration</span>
-                    </div>
-                    <span className="text-green-600 font-medium">Complete</span>
-                  </div>
-                  
-                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg">
-                    <div className="flex items-center">
-                      <Check className="text-green-600 mr-3 h-5 w-5" />
-                      <span className="font-medium">License Verification</span>
-                    </div>
-                    <span className="text-green-600 font-medium">Verified</span>
-                  </div>
-                  
-                  <div className="flex items-center justify-between p-3 bg-orange-50 rounded-lg">
-                    <div className="flex items-center">
-                      <Clock className="text-orange-500 mr-3 h-5 w-5" />
-                      <span className="font-medium">Reference Check</span>
-                    </div>
-                    <span className="text-orange-500 font-medium">In Progress</span>
-                  </div>
-                  
-                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <div className="flex items-center">
-                      <div className="w-5 h-5 rounded-full border-2 border-gray-400 mr-3"></div>
-                      <span className="font-medium text-gray-500">Registry Activation</span>
-                    </div>
-                    <span className="text-gray-500 font-medium">Pending</span>
-                  </div>
-                </div>
-                
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <p className="text-sm text-gray-600 mb-3">Estimated completion: 2-3 business days</p>
-                  <Button className="w-full" onClick={handleSignIn}>
-                    Get Started
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+          </div>
+
+          {/* Our Impact */}
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Our Impact</h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">250+</div>
+                <div className="text-gray-600">Verified Healthcare Professionals</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">45+</div>
+                <div className="text-gray-600">Partner Organizations</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">30+</div>
+                <div className="text-gray-600">Countries Served</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

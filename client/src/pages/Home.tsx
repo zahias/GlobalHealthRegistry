@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { StatusBadge } from "@/components/StatusBadge";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { UserRound, Building, MessageSquare, GraduationCap, Search, Users, TrendingUp, AlertTriangle } from "lucide-react";
+import { UserRound, Building, MessageSquare, GraduationCap, Search, Users, TrendingUp, AlertTriangle, Heart, Shield, Globe, MapPin } from "lucide-react";
 
 export default function Home() {
   const { user, isLoading } = useAuth();
