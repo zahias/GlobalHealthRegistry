@@ -30,9 +30,6 @@ export function PublicNavigation() {
               <Link href="/training">
                 <span className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Training Resources</span>
               </Link>
-              <Link href="/about">
-                <span className="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium cursor-pointer">About</span>
-              </Link>
             </div>
           </div>
           <div className="flex items-center space-x-4">
