@@ -253,6 +253,62 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* About AUB Global Health Institute */}
+            <Card>
+              <CardHeader>
+                <CardTitle>About AUB Global Health Institute</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 mb-6">
+                  The AUB Global Health Institute is a leading center for global health research, education, and
+                  practice in the Middle East and beyond. At the crossroads of three continents, AUB-GHI is
+                  uniquely positioned to address global health challenges affecting vulnerable populations.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-4 mb-6">
+                  <div className="flex items-center text-sm">
+                    <Users className="text-amber-600 h-4 w-4 mr-2" />
+                    <span className="text-gray-600">WHO Collaborating Center</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <GraduationCap className="text-amber-600 h-4 w-4 mr-2" />
+                    <span className="text-gray-600">500+ Alumni in Humanitarian Work</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <MapPin className="text-amber-600 h-4 w-4 mr-2" />
+                    <span className="text-gray-600">Programs in 20+ Countries</span>
+                  </div>
+                </div>
+
+                {/* Core Values */}
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="text-center p-4 bg-red-50 rounded-lg">
+                    <Heart className="text-red-600 h-8 w-8 mx-auto mb-2" />
+                    <h5 className="font-semibold text-red-800 mb-1">Humanitarian Excellence</h5>
+                    <p className="text-xs text-red-700">
+                      Highest standards of humanitarian aid with dignity and respect
+                    </p>
+                  </div>
+
+                  <div className="text-center p-4 bg-blue-50 rounded-lg">
+                    <Shield className="text-blue-600 h-8 w-8 mx-auto mb-2" />
+                    <h5 className="font-semibold text-blue-800 mb-1">Professional Integrity</h5>
+                    <p className="text-xs text-blue-700">
+                      Rigorous verification of credentials and ethical practice
+                    </p>
+                  </div>
+
+                  <div className="text-center p-4 bg-green-50 rounded-lg">
+                    <Globe className="text-green-600 h-8 w-8 mx-auto mb-2" />
+                    <h5 className="font-semibold text-green-800 mb-1">Global Collaboration</h5>
+                    <p className="text-xs text-green-700">
+                      Partnerships worldwide to maximize humanitarian impact
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Sidebar */}
