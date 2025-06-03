@@ -11,9 +11,9 @@ import OrganizationProfile from "@/pages/OrganizationProfile";
 import OrganizationSearch from "@/pages/OrganizationSearch";
 import Messages from "@/pages/Messages";
 import TrainingResources from "@/pages/TrainingResources";
-import ProfessionalDetails from "@/pages/ProfessionalDetails";
 import ForProfessionals from "@/pages/ForProfessionals";
 import ForOrganizations from "@/pages/ForOrganizations";
+import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -27,6 +27,7 @@ function Router() {
           <Route path="/for-professionals" component={ForProfessionals} />
           <Route path="/for-organizations" component={ForOrganizations} />
           <Route path="/training" component={TrainingResources} />
+          <Route path="/about" component={About} />
         </>
       ) : (
         <>
@@ -34,11 +35,11 @@ function Router() {
           <Route path="/profile" component={ProfessionalProfile} />
           <Route path="/organization" component={OrganizationProfile} />
           <Route path="/search" component={OrganizationSearch} />
-          <Route path="/professional/:id" component={ProfessionalDetails} />
           <Route path="/messages" component={Messages} />
           <Route path="/training" component={TrainingResources} />
           <Route path="/for-professionals" component={ForProfessionals} />
           <Route path="/for-organizations" component={ForOrganizations} />
+          <Route path="/about" component={About} />
         </>
       )}
       <Route component={NotFound} />

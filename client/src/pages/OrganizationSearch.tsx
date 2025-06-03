@@ -14,10 +14,6 @@ interface SearchFilters {
   language: string;
   availability: string;
   region: string;
-  experience: string;
-  duration: string;
-  certification: string;
-  verified: string;
 }
 
 export default function OrganizationSearch() {
@@ -26,10 +22,6 @@ export default function OrganizationSearch() {
     language: "",
     availability: "",
     region: "",
-    experience: "",
-    duration: "",
-    certification: "",
-    verified: "",
   });
 
   const [searchTriggered, setSearchTriggered] = useState(false);
@@ -56,10 +48,6 @@ export default function OrganizationSearch() {
       language: "",
       availability: "",
       region: "",
-      experience: "",
-      duration: "",
-      certification: "",
-      verified: "",
     });
     setSearchTriggered(false);
   };
@@ -83,9 +71,9 @@ export default function OrganizationSearch() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div className="grid md:grid-cols-4 gap-4 mb-4">
               <div>
-                <Label htmlFor="specialty">Medical Specialty</Label>
+                <Label htmlFor="specialty">Specialty Required</Label>
                 <Select value={filters.specialty || "any"} onValueChange={(value) => handleFilterChange('specialty', value)}>
                   <SelectTrigger>
                     <SelectValue placeholder="Any Specialty" />
@@ -96,27 +84,34 @@ export default function OrganizationSearch() {
                     <SelectItem value="Surgery">Surgery</SelectItem>
                     <SelectItem value="Mental Health">Mental Health</SelectItem>
                     <SelectItem value="Pediatrics">Pediatrics</SelectItem>
-                    <SelectItem value="Public Health">Public Health</SelectItem>
-                    <SelectItem value="Nursing">Nursing</SelectItem>
-                    <SelectItem value="Obstetrics">Obstetrics & Gynecology</SelectItem>
-                    <SelectItem value="Anesthesiology">Anesthesiology</SelectItem>
-                    <SelectItem value="Infectious Disease">Infectious Disease</SelectItem>
                     <SelectItem value="Internal Medicine">Internal Medicine</SelectItem>
-                    <SelectItem value="Critical Care">Critical Care</SelectItem>
-                    <SelectItem value="Orthopedics">Orthopedics</SelectItem>
-                    <SelectItem value="Neurosurgery">Neurosurgery</SelectItem>
-                    <SelectItem value="Nutrition">Nutrition</SelectItem>
-                    <SelectItem value="Maternal Health">Maternal Health</SelectItem>
-                    <SelectItem value="Neonatology">Neonatology</SelectItem>
-                    <SelectItem value="Trauma Surgery">Trauma Surgery</SelectItem>
-                    <SelectItem value="Psychology">Psychology</SelectItem>
-                    <SelectItem value="Epidemiology">Epidemiology</SelectItem>
+                    <SelectItem value="Anesthesiology">Anesthesiology</SelectItem>
+                    <SelectItem value="Obstetrics">Obstetrics</SelectItem>
+                    <SelectItem value="Infectious Disease">Infectious Disease</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
               
               <div>
-                <Label htmlFor="language">Language Proficiency</Label>
+                <Label htmlFor="region">Geographic Region</Label>
+                <Select value={filters.region || "any"} onValueChange={(value) => handleFilterChange('region', value)}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Any Region" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="any">Any Region</SelectItem>
+                    <SelectItem value="Africa">Africa</SelectItem>
+                    <SelectItem value="Asia">Asia</SelectItem>
+                    <SelectItem value="Americas">Americas</SelectItem>
+                    <SelectItem value="Europe">Europe</SelectItem>
+                    <SelectItem value="Middle East">Middle East</SelectItem>
+                    <SelectItem value="Caribbean">Caribbean</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
+              <div>
+                <Label htmlFor="language">Language Requirements</Label>
                 <Select value={filters.language || "any"} onValueChange={(value) => handleFilterChange('language', value)}>
                   <SelectTrigger>
                     <SelectValue placeholder="Any Language" />
@@ -124,18 +119,12 @@ export default function OrganizationSearch() {
                   <SelectContent>
                     <SelectItem value="any">Any Language</SelectItem>
                     <SelectItem value="English">English</SelectItem>
-                    <SelectItem value="Arabic">Arabic</SelectItem>
                     <SelectItem value="French">French</SelectItem>
                     <SelectItem value="Spanish">Spanish</SelectItem>
+                    <SelectItem value="Arabic">Arabic</SelectItem>
                     <SelectItem value="Portuguese">Portuguese</SelectItem>
                     <SelectItem value="Mandarin">Mandarin</SelectItem>
-                    <SelectItem value="German">German</SelectItem>
-                    <SelectItem value="Swahili">Swahili</SelectItem>
-                    <SelectItem value="Hindi">Hindi</SelectItem>
-                    <SelectItem value="Urdu">Urdu</SelectItem>
-                    <SelectItem value="Korean">Korean</SelectItem>
-                    <SelectItem value="Bengali">Bengali</SelectItem>
-                    <SelectItem value="Igbo">Igbo</SelectItem>
+                    <SelectItem value="Russian">Russian</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -148,74 +137,8 @@ export default function OrganizationSearch() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="any">All Statuses</SelectItem>
-                    <SelectItem value="available">Available Now</SelectItem>
-                    <SelectItem value="pending_documentation">Pending Verification</SelectItem>
-                    <SelectItem value="deployed">Currently Deployed</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              
-              <div>
-                <Label htmlFor="experience">Experience Level</Label>
-                <Select value={filters.experience || "any"} onValueChange={(value) => handleFilterChange('experience', value)}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Any Experience" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="any">Any Experience</SelectItem>
-                    <SelectItem value="2-5">2-5 Years</SelectItem>
-                    <SelectItem value="5-10">5-10 Years</SelectItem>
-                    <SelectItem value="10+">10+ Years</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-4 mb-4">
-              <div>
-                <Label htmlFor="duration">Preferred Duration</Label>
-                <Select value={filters.duration || "any"} onValueChange={(value) => handleFilterChange('duration', value)}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Any Duration" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="any">Any Duration</SelectItem>
-                    <SelectItem value="3-6 months">3-6 Months</SelectItem>
-                    <SelectItem value="6-12 months">6-12 Months</SelectItem>
-                    <SelectItem value="12+ months">12+ Months</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              
-              <div>
-                <Label htmlFor="certification">Key Certifications</Label>
-                <Select value={filters.certification || "any"} onValueChange={(value) => handleFilterChange('certification', value)}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Any Certification" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="any">Any Certification</SelectItem>
-                    <SelectItem value="ACLS">ACLS</SelectItem>
-                    <SelectItem value="PALS">PALS</SelectItem>
-                    <SelectItem value="ATLS">ATLS</SelectItem>
-                    <SelectItem value="Board Certified">Board Certified</SelectItem>
-                    <SelectItem value="MPH">Master of Public Health</SelectItem>
-                    <SelectItem value="RN">Registered Nurse</SelectItem>
-                    <SelectItem value="Tropical Medicine">Tropical Medicine</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              
-              <div>
-                <Label htmlFor="verification">License Status</Label>
-                <Select value={filters.verified || "any"} onValueChange={(value) => handleFilterChange('verified', value)}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="All Licenses" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="any">All Licenses</SelectItem>
-                    <SelectItem value="verified">Verified Only</SelectItem>
-                    <SelectItem value="pending">Pending Verification</SelectItem>
+                    <SelectItem value="available">Available Only</SelectItem>
+                    <SelectItem value="pending_documentation">Pending Documentation</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

@@ -1,13 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Navigation } from "@/components/Navigation";
 import { UserRound, Shield, Globe, Clock, Heart, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
-import { PublicNavigation } from "@/components/PublicNavigation";
 
 export default function ForProfessionals() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white">
-      <PublicNavigation />
+    <div className="min-h-screen bg-gray-50">
+      <Navigation />
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -88,19 +88,19 @@ export default function ForProfessionals() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-4 text-orange-800">2. Connect with Organizations</h3>
+                <h3 className="font-semibold text-lg mb-4 text-orange-800">2. Get Verified</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                    Browse available positions
+                    Submit verification documents
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                    Apply to opportunities that match your skills
+                    Complete background checks
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                    Get contacted by recruiters
+                    Receive platform approval
                   </li>
                 </ul>
               </div>

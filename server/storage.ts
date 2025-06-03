@@ -111,34 +111,11 @@ export class DatabaseStorage implements IStorage {
   }
 
   async getProfessionalById(id: number): Promise<Professional | undefined> {
-    const [result] = await db
-      .select({
-        id: professionals.id,
-        userId: professionals.userId,
-        specialties: professionals.specialties,
-        languages: professionals.languages,
-        certifications: professionals.certifications,
-        experience: professionals.experience,
-        availabilityStatus: professionals.availabilityStatus,
-        availableFrom: professionals.availableFrom,
-        preferredDuration: professionals.preferredDuration,
-        licenseVerified: professionals.licenseVerified,
-        bio: professionals.bio,
-        createdAt: professionals.createdAt,
-        updatedAt: professionals.updatedAt,
-        user: {
-          id: users.id,
-          email: users.email,
-          firstName: users.firstName,
-          lastName: users.lastName,
-          profileImageUrl: users.profileImageUrl,
-        },
-      })
+    const [professional] = await db
+      .select()
       .from(professionals)
-      .leftJoin(users, eq(professionals.userId, users.id))
       .where(eq(professionals.id, id));
-    
-    return result as Professional & { user: any };
+    return professional;
   }
 
   async searchProfessionals(filters: {

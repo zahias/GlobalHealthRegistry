@@ -83,12 +83,10 @@ export function ProfessionalCard({ professional }: ProfessionalCardProps) {
               <MessageSquare className="mr-1 h-4 w-4" />
               Contact
             </Button>
-            <Link href={`/professional/${professional.id}`}>
-              <Button variant="outline">
-                <Eye className="mr-1 h-4 w-4" />
-                View Profile
-              </Button>
-            </Link>
+            <Button variant="outline">
+              <Eye className="mr-1 h-4 w-4" />
+              View Profile
+            </Button>
           </div>
         </div>
       </CardContent>
