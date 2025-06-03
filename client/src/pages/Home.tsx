@@ -222,37 +222,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Platform Statistics */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Global Health Registry Impact</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-full mx-auto mb-2">
-                      <Users className="h-6 w-6 text-primary" />
-                    </div>
-                    <div className="text-2xl font-bold text-gray-900">250+</div>
-                    <div className="text-sm text-gray-600">Active Professionals</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mx-auto mb-2">
-                      <Building className="h-6 w-6 text-green-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-gray-900">45</div>
-                    <div className="text-sm text-gray-600">Verified Organizations</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mx-auto mb-2">
-                      <TrendingUp className="h-6 w-6 text-orange-600" />
-                    </div>
-                    <div className="text-2xl font-bold text-gray-900">30</div>
-                    <div className="text-sm text-gray-600">Countries Served</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+
 
             {/* About AUB Global Health Institute */}
             <Card>
