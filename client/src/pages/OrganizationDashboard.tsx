@@ -1,5 +1,5 @@
 import { useAuth } from "@/hooks/useAuth";
-import { RoleBasedNavigation } from "@/components/RoleBasedNavigation";
+import { UnifiedNavigation } from "@/components/UnifiedNavigation";
 import { OnboardingDashboard } from "@/components/OnboardingDashboard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

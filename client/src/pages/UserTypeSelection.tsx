@@ -14,26 +14,23 @@ export default function UserTypeSelection() {
 
   const setUserTypeMutation = useMutation({
     mutationFn: async (userType: string) => {
-      const response = await fetch("/api/auth/set-user-type", {
-        method: "POST",
+      const response = await fetch('/api/auth/set-user-type', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ userType }),
       });
       
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`Failed to set user type: ${response.statusText}`);
       }
       
       return response.json();
     },
-    onSuccess: () => {
-      if (selectedType === 'professional') {
-        setLocation('/profile');
-      } else {
-        setLocation('/organization');
-      }
+    onSuccess: (data, variables) => {
+      // Force page refresh to update auth state
+      window.location.href = variables === 'professional' ? '/profile' : '/organization';
     },
   });
 

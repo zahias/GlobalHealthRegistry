@@ -1,5 +1,5 @@
 import { useAuth } from "@/hooks/useAuth";
-import { RoleBasedNavigation } from "@/components/RoleBasedNavigation";
+import { UnifiedNavigation } from "@/components/UnifiedNavigation";
 import { OnboardingDashboard } from "@/components/OnboardingDashboard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -41,7 +41,7 @@ export default function ProfessionalDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <RoleBasedNavigation />
+      <UnifiedNavigation />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Welcome Header */}

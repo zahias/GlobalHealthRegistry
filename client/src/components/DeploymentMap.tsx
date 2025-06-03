@@ -103,8 +103,10 @@ export function DeploymentMap() {
               
               {/* Location markers */}
               {locations.map((location: DeploymentLocation, index: number) => {
-                const x = 150 + (index * 120) % 700;
-                const y = 200 + (index % 3) * 80;
+                // Convert coordinates to SVG positions
+                const [lat, lng] = location.coordinates;
+                const x = ((lng + 180) / 360) * 800;
+                const y = ((90 - lat) / 180) * 400;
                 
                 return (
                   <g key={location.id}>
@@ -119,12 +121,17 @@ export function DeploymentMap() {
                       />
                     )}
                     
-                    {/* Location marker */}
+                    {/* Location marker with proper colors */}
                     <circle
                       cx={x}
                       cy={y}
                       r="8"
-                      className={`cursor-pointer transition-all hover:r-10 ${getUrgencyColor(location.urgency)}`}
+                      fill={location.urgency === "critical" ? "#dc2626" : 
+                            location.urgency === "high" ? "#ea580c" :
+                            location.urgency === "medium" ? "#ca8a04" : "#16a34a"}
+                      stroke="#fff"
+                      strokeWidth="2"
+                      className="cursor-pointer transition-all hover:r-10"
                       onClick={() => setSelectedLocation(location)}
                     />
                     
