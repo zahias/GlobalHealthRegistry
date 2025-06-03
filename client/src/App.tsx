@@ -22,6 +22,8 @@ import PostOpportunity from "@/pages/PostOpportunity";
 import ForProfessionals from "@/pages/ForProfessionals";
 import EnhancedForProfessionals from "@/pages/EnhancedForProfessionals";
 import ForOrganizations from "@/pages/ForOrganizations";
+import EnhancedForOrganizations from "@/pages/EnhancedForOrganizations";
+import Settings from "@/pages/Settings";
 import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
 
@@ -48,7 +50,7 @@ function Router() {
         <>
           <Route path="/" component={EnhancedLanding} />
           <Route path="/for-professionals" component={EnhancedForProfessionals} />
-          <Route path="/for-organizations" component={ForOrganizations} />
+          <Route path="/for-organizations" component={EnhancedForOrganizations} />
           <Route path="/training" component={TrainingResources} />
         </>
       ) : !user?.userType ? (
@@ -64,6 +66,7 @@ function Router() {
           <Route path="/professional/:id" component={ProfessionalDetails} />
           <Route path="/messages" component={Messages} />
           <Route path="/training" component={TrainingResources} />
+          <Route path="/settings" component={Settings} />
           <Route path="/for-professionals" component={ForProfessionals} />
           <Route path="/for-organizations" component={ForOrganizations} />
         </>
