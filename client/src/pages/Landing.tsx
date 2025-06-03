@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { UserRound, Building, Check, Clock, X, Plane, Shield, Users } from "lucide-react";
+import { UserRound, Building, Check, Clock, X, Plane, Shield, Users, Heart, MapPin, GraduationCap, Globe } from "lucide-react";
 import { Link } from "wouter";
 import aubLogo from "@assets/ghi_logo-345x198-1.png";
 
@@ -128,13 +128,18 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Verification Process */}
+      {/* About the Global Health Registry */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Secure Verification Process</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Multi-step verification ensures all professionals meet the highest standards for humanitarian deployment.
+            <div className="flex justify-center items-center mb-6">
+              <img src={aubLogo} alt="AUB Global Health Institute" className="h-16 mr-4" />
+            </div>
+            <h2 className="text-3xl font-bold mb-4">About the Global Health Registry</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+              A initiative by the American University of Beirut Global Health Institute to connect
+              skilled healthcare professionals with humanitarian organizations serving in crisis and
+              conflict zones worldwide.
             </p>
           </div>
           

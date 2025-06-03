@@ -153,7 +153,7 @@ export default function Home() {
                     </div>
                     <Badge variant="secondary">ACTIVE</Badge>
                   </div>
-                  <Link href="/search">
+                  <Link href="/deployments">
                     <Button className="w-full bg-red-600 hover:bg-red-700">
                       View Emergency Deployments
                     </Button>
@@ -213,7 +213,7 @@ export default function Home() {
                 </div>
                 
                 <div className="mt-6 pt-4 border-t border-gray-200">
-                  <Link href="/search">
+                  <Link href="/deployments">
                     <Button className="w-full bg-orange-600 hover:bg-orange-700">
                       View All Opportunities
                     </Button>
