@@ -26,8 +26,8 @@ import {
 import { Link } from "wouter";
 
 export default function EnhancedForOrganizations() {
-  const handleSignIn = () => {
-    window.location.href = "/api/login";
+  const handleOrganizationDemo = () => {
+    window.location.href = "/organization-demo";
   };
 
   return (
@@ -56,12 +56,12 @@ export default function EnhancedForOrganizations() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button 
-                onClick={handleSignIn}
+                onClick={handleOrganizationDemo}
                 size="lg" 
                 className="bg-green-600 hover:bg-green-700 text-lg px-8 py-3"
               >
                 <Building2 className="mr-2 h-5 w-5" />
-                Register Your Organization
+                Explore Organization Dashboard
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
@@ -370,12 +370,12 @@ export default function EnhancedForOrganizations() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={handleSignIn}
+              onClick={handleOrganizationDemo}
               size="lg" 
               className="bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-3"
             >
               <Building2 className="mr-2 h-5 w-5" />
-              Register Your Organization
+              Explore Organization Dashboard
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
