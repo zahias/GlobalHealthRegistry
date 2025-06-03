@@ -1,12 +1,14 @@
 import { useAuth } from "@/hooks/useAuth";
 import { Navigation } from "@/components/Navigation";
+import { OnboardingDashboard } from "@/components/OnboardingDashboard";
+import { NotificationCenter } from "@/components/NotificationCenter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { StatusBadge } from "@/components/StatusBadge";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { UserRound, Building, MessageSquare, GraduationCap, Search, Users, TrendingUp, AlertTriangle, Heart, Shield, Globe, MapPin } from "lucide-react";
+import { UserRound, Building, MessageSquare, GraduationCap, Search, Users, TrendingUp, AlertTriangle, Heart, Shield, Globe, MapPin, Bell, Calendar, Activity } from "lucide-react";
 
 export default function Home() {
   const { user, isLoading } = useAuth();
@@ -80,6 +82,14 @@ export default function Home() {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-6">
+            {/* Onboarding Dashboard - Show for new users */}
+            {userProfile && (!userProfile.profileData || !userProfile.onboardingCompleted) && (
+              <OnboardingDashboard 
+                userType={userProfile.userType || "professional"} 
+                user={userProfile}
+                profileData={userProfile.profileData}
+              />
+            )}
             {/* Quick Actions */}
             <Card>
               <CardHeader>

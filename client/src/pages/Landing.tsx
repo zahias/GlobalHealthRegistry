@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { SuccessStoriesCarousel } from "@/components/SuccessStoriesCarousel";
+import { DeploymentMap } from "@/components/DeploymentMap";
 import { UserRound, Building, Check, Clock, X, Plane, Shield, Users, Heart, MapPin, GraduationCap, Globe } from "lucide-react";
 import { Link } from "wouter";
 import aubLogo from "@assets/ghi_logo-345x198-1.png";
@@ -228,6 +230,18 @@ export default function Landing() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Success Stories */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Real Stories from the Field</h3>
+            <SuccessStoriesCarousel />
+          </div>
+
+          {/* Active Deployment Locations */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Current Crisis Response Areas</h3>
+            <DeploymentMap />
           </div>
 
           {/* Our Impact */}
