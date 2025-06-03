@@ -20,6 +20,7 @@ import ProfessionalDetails from "@/pages/ProfessionalDetails";
 import DeploymentSearch from "@/pages/DeploymentSearch";
 import PostOpportunity from "@/pages/PostOpportunity";
 import ForProfessionals from "@/pages/ForProfessionals";
+import EnhancedForProfessionals from "@/pages/EnhancedForProfessionals";
 import ForOrganizations from "@/pages/ForOrganizations";
 import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
@@ -46,7 +47,7 @@ function Router() {
       {!isAuthenticated ? (
         <>
           <Route path="/" component={EnhancedLanding} />
-          <Route path="/for-professionals" component={ForProfessionals} />
+          <Route path="/for-professionals" component={EnhancedForProfessionals} />
           <Route path="/for-organizations" component={ForOrganizations} />
           <Route path="/training" component={TrainingResources} />
         </>
