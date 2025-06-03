@@ -6,8 +6,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useAuth } from "@/hooks/useAuth";
 import { useQuery } from "@tanstack/react-query";
 import Landing from "@/pages/Landing";
+import EnhancedLanding from "@/pages/EnhancedLanding";
 import Home from "@/pages/Home";
 import UserTypeSelection from "@/pages/UserTypeSelection";
+import ProfessionalDashboard from "@/pages/ProfessionalDashboard";
+import OrganizationDashboard from "@/pages/OrganizationDashboard";
 import ProfessionalProfile from "@/pages/ProfessionalProfile";
 import OrganizationProfile from "@/pages/OrganizationProfile";
 import OrganizationSearch from "@/pages/OrganizationSearch";
@@ -41,7 +44,7 @@ function Router() {
     <Switch>
       {!isAuthenticated ? (
         <>
-          <Route path="/" component={Landing} />
+          <Route path="/" component={EnhancedLanding} />
           <Route path="/for-professionals" component={ForProfessionals} />
           <Route path="/for-organizations" component={ForOrganizations} />
           <Route path="/training" component={TrainingResources} />
@@ -50,7 +53,7 @@ function Router() {
         <Route path="*" component={UserTypeSelection} />
       ) : (
         <>
-          <Route path="/" component={Home} />
+          <Route path="/" component={(user?.userType === 'professional') ? ProfessionalDashboard : OrganizationDashboard} />
           <Route path="/profile" component={ProfessionalProfile} />
           <Route path="/organization" component={OrganizationProfile} />
           <Route path="/search" component={OrganizationSearch} />
