@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { NotificationCenter } from "@/components/NotificationCenter";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { mockProfessionalData, mockOrganizationData } from "@/components/MockDataProvider";
 import { 
   UserRound, 
   Search, 

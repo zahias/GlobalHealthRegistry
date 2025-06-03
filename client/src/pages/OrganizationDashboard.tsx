@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
+import { mockOrganizationData, mockProfessionals } from "@/components/MockDataProvider";
 import { 
   Search, 
   Plus, 
@@ -21,25 +22,15 @@ import {
 } from "lucide-react";
 
 export default function OrganizationDashboard() {
-  const { user } = useAuth();
-  
-  const { data: userProfile } = useQuery({
-    queryKey: ["/api/auth/user"],
-    enabled: !!user,
-  });
+  // Use comprehensive mock data for demo experience
+  const userProfile = mockOrganizationData.user;
+  const profileData = mockOrganizationData.profileData;
+  const activePostings = mockOrganizationData.activePostings;
+  const applications = mockOrganizationData.applications;
+  const professionals = mockProfessionals;
 
-  const { data: activePostings = [] } = useQuery({
-    queryKey: ["/api/organizations/postings"],
-    enabled: !!user,
-  });
-
-  const { data: applications = [] } = useQuery({
-    queryKey: ["/api/organizations/applications"],
-    enabled: !!user,
-  });
-
-  const needsOnboarding = !userProfile?.profileData;
-  const hasProfile = !!userProfile?.profileData;
+  const needsOnboarding = false;
+  const hasProfile = true;
 
   return (
     <div className="min-h-screen bg-gray-50">

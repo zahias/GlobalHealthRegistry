@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
+import { mockProfessionalData, mockDeploymentOpportunities } from "@/components/MockDataProvider";
 import { 
   MapPin, 
   Calendar, 
@@ -19,25 +20,15 @@ import {
 } from "lucide-react";
 
 export default function ProfessionalDashboard() {
-  const { user } = useAuth();
-  
-  const { data: userProfile } = useQuery({
-    queryKey: ["/api/auth/user"],
-    enabled: !!user,
-  });
+  // Use comprehensive mock data for demo experience
+  const userProfile = mockProfessionalData.user;
+  const profileData = mockProfessionalData.profileData;
+  const applications = mockProfessionalData.applications;
+  const messages = mockProfessionalData.messages;
+  const opportunities = mockDeploymentOpportunities.slice(0, 3);
 
-  const { data: applications = [] } = useQuery({
-    queryKey: ["/api/professionals/applications"],
-    enabled: !!user,
-  });
-
-  const { data: messages = [] } = useQuery({
-    queryKey: ["/api/messages/conversations"],
-    enabled: !!user,
-  });
-
-  const needsOnboarding = !userProfile?.profileData;
-  const hasProfile = !!userProfile?.profileData;
+  const needsOnboarding = false;
+  const hasProfile = true;
 
   return (
     <div className="min-h-screen bg-gray-50">
