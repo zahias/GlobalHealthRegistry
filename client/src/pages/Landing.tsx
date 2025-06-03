@@ -244,24 +244,7 @@ export default function Landing() {
             <DeploymentMap />
           </div>
 
-          {/* Our Impact */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Our Impact</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <div className="text-4xl font-bold text-orange-600 mb-2">250+</div>
-                <div className="text-gray-600">Verified Healthcare Professionals</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-orange-600 mb-2">45+</div>
-                <div className="text-gray-600">Partner Organizations</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-orange-600 mb-2">30+</div>
-                <div className="text-gray-600">Countries Served</div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 

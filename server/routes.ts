@@ -292,6 +292,62 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Mock deployment locations endpoint
+  app.get('/api/deployment-locations', async (req, res) => {
+    try {
+      const mockLocations = [
+        {
+          id: 1,
+          country: "Bangladesh",
+          region: "Cox's Bazar",
+          coordinates: [92.0, 21.4],
+          activeDeployments: 12,
+          urgency: "high",
+          lastUpdated: new Date().toISOString(),
+          organizations: ["UNHCR", "MSF", "WHO"],
+          neededSpecialties: ["Emergency Medicine", "Pediatrics", "Mental Health"]
+        },
+        {
+          id: 2,
+          country: "Lebanon",
+          region: "Bekaa Valley",
+          coordinates: [36.0, 33.8],
+          activeDeployments: 8,
+          urgency: "medium",
+          lastUpdated: new Date().toISOString(),
+          organizations: ["UNICEF", "IRC"],
+          neededSpecialties: ["Internal Medicine", "Surgery"]
+        },
+        {
+          id: 3,
+          country: "Syria",
+          region: "Aleppo",
+          coordinates: [37.2, 36.2],
+          activeDeployments: 15,
+          urgency: "critical",
+          lastUpdated: new Date().toISOString(),
+          organizations: ["MSF", "WHO", "ICRC"],
+          neededSpecialties: ["Surgery", "Emergency Medicine", "Anesthesiology"]
+        },
+        {
+          id: 4,
+          country: "Kenya",
+          region: "Kakuma",
+          coordinates: [34.8, 3.7],
+          activeDeployments: 6,
+          urgency: "low",
+          lastUpdated: new Date().toISOString(),
+          organizations: ["UNHCR", "World Vision"],
+          neededSpecialties: ["Public Health", "Infectious Disease"]
+        }
+      ];
+      res.json(mockLocations);
+    } catch (error) {
+      console.error("Error fetching deployment locations:", error);
+      res.status(500).json({ message: "Failed to fetch deployment locations" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

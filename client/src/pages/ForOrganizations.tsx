@@ -144,36 +144,7 @@ export default function ForOrganizations() {
           </CardContent>
         </Card>
 
-        {/* Requirements Section */}
-        <Card className="border-blue-200">
-          <CardHeader>
-            <CardTitle className="text-2xl text-blue-900">Organization Requirements</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold text-lg mb-4 text-blue-800">Verification Requirements</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Valid registration as humanitarian organization</li>
-                  <li>• Proof of tax-exempt or charitable status</li>
-                  <li>• References from established humanitarian networks</li>
-                  <li>• Clear mission statement and operational history</li>
-                  <li>• Comprehensive insurance coverage</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-4 text-blue-800">Operational Standards</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Adherence to humanitarian principles</li>
-                  <li>• Duty of care protocols for deployed staff</li>
-                  <li>• Security and safety procedures</li>
-                  <li>• Professional development support</li>
-                  <li>• Clear deployment terms and conditions</li>
-                </ul>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+
       </div>
     </div>
   );
