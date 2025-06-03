@@ -1,17 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { NotificationCenter } from "@/components/NotificationCenter";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { 
   UserRound, 
   Search, 
   MessageSquare, 
   GraduationCap, 
-  Building, 
+  Building2, 
   LogOut, 
   MapPin,
   Users,
   Briefcase,
-  Settings
+  Settings,
+  Home,
+  User,
+  Plus
 } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
@@ -82,18 +86,18 @@ export function UnifiedNavigation({ isPublic = false }: UnifiedNavigationProps) 
   const isOrganization = userProfile?.userType === 'organization';
 
   const professionalNavItems = [
-    { href: "/", icon: UserRound, label: "Dashboard" },
+    { href: "/", icon: Home, label: "Dashboard" },
     { href: "/deployments", icon: MapPin, label: "Find Opportunities" },
-    { href: "/profile", icon: Settings, label: "My Profile" },
+    { href: "/profile", icon: User, label: "My Profile" },
     { href: "/messages", icon: MessageSquare, label: "Messages" },
     { href: "/training", icon: GraduationCap, label: "Training" }
   ];
 
   const organizationNavItems = [
-    { href: "/", icon: Building, label: "Dashboard" },
+    { href: "/", icon: Home, label: "Dashboard" },
     { href: "/search", icon: Search, label: "Find Professionals" },
-    { href: "/deployments", icon: Briefcase, label: "My Opportunities" },
-    { href: "/organization", icon: Settings, label: "Organization Profile" },
+    { href: "/post-opportunity", icon: Plus, label: "Post Opportunity" },
+    { href: "/organization", icon: Building2, label: "Organization Profile" },
     { href: "/messages", icon: MessageSquare, label: "Messages" }
   ];
 
@@ -139,32 +143,43 @@ export function UnifiedNavigation({ isPublic = false }: UnifiedNavigationProps) 
           <div className="flex items-center space-x-4">
             <NotificationCenter />
             
-            <div className="flex items-center space-x-3">
-              <Avatar className="h-8 w-8">
-                <AvatarImage src={userProfile?.profileImageUrl || ""} />
-                <AvatarFallback>
-                  {userProfile?.firstName?.[0] || "U"}{userProfile?.lastName?.[0] || ""}
-                </AvatarFallback>
-              </Avatar>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="flex items-center space-x-3">
+                  <Avatar className="h-8 w-8">
+                    <AvatarImage src={userProfile?.profileImageUrl || ""} />
+                    <AvatarFallback>
+                      {userProfile?.firstName?.[0] || "U"}{userProfile?.lastName?.[0] || ""}
+                    </AvatarFallback>
+                  </Avatar>
+                  
+                  <div className="hidden md:block text-left">
+                    <div className="text-sm font-medium text-gray-900">
+                      {userProfile?.firstName || ""} {userProfile?.lastName || ""}
+                    </div>
+                    <div className="text-xs text-gray-500 capitalize">
+                      {userProfile?.userType || "User"}
+                    </div>
+                  </div>
+                </Button>
+              </DropdownMenuTrigger>
               
-              <div className="hidden md:block">
-                <div className="text-sm font-medium text-gray-900">
-                  {userProfile?.firstName || ""} {userProfile?.lastName || ""}
-                </div>
-                <div className="text-xs text-gray-500 capitalize">
-                  {userProfile?.userType || "User"}
-                </div>
-              </div>
-            </div>
-
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handleLogout}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              <LogOut className="h-4 w-4" />
-            </Button>
+              <DropdownMenuContent align="end" className="w-56">
+                <DropdownMenuItem asChild>
+                  <Link href="/settings" className="flex items-center">
+                    <Settings className="h-4 w-4 mr-2" />
+                    Settings
+                  </Link>
+                </DropdownMenuItem>
+                
+                <DropdownMenuSeparator />
+                
+                <DropdownMenuItem onClick={handleLogout} className="flex items-center">
+                  <LogOut className="h-4 w-4 mr-2" />
+                  Sign Out
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </div>
