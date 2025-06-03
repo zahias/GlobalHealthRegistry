@@ -92,43 +92,37 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Status Badge Showcase */}
+      {/* Global Impact Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Professional Status Tracking</h2>
+            <h2 className="text-3xl font-bold mb-4">Global Health Impact</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Real-time availability tracking ensures rapid response capabilities with clear status indicators for all stakeholders.
+              Our registry connects skilled healthcare professionals with humanitarian organizations worldwide, 
+              ensuring rapid response capabilities in times of crisis.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Check className="text-white" />
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="text-white h-8 w-8" />
               </div>
-              <h3 className="font-semibold text-green-700 mb-2">Available for Deployment</h3>
-              <p className="text-sm text-gray-600">Ready for immediate deployment with verified credentials</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">250+</h3>
+              <p className="text-gray-600">Verified Healthcare Professionals</p>
             </div>
-            <div className="bg-orange-50 border border-orange-200 rounded-lg p-6 text-center">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="text-white" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building className="text-white h-8 w-8" />
               </div>
-              <h3 className="font-semibold text-orange-700 mb-2">Pending Documentation</h3>
-              <p className="text-sm text-gray-600">Awaiting document verification or license validation</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">45+</h3>
+              <p className="text-gray-600">Partner Organizations</p>
             </div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
-              <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <X className="text-white" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="text-white h-8 w-8" />
               </div>
-              <h3 className="font-semibold text-red-700 mb-2">Not Available</h3>
-              <p className="text-sm text-gray-600">Temporarily unavailable due to personal or professional constraints</p>
-            </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6 text-center">
-              <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Plane className="text-white" />
-              </div>
-              <h3 className="font-semibold text-purple-700 mb-2">Deployment in Progress</h3>
-              <p className="text-sm text-gray-600">Currently deployed in humanitarian response mission</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">30+</h3>
+              <p className="text-gray-600">Countries Served</p>
             </div>
           </div>
         </div>
