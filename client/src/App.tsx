@@ -28,49 +28,23 @@ import About from "@/pages/About";
 import NotFound from "@/pages/not-found";
 
 function Router() {
-  const { isAuthenticated, isLoading } = useAuth();
-  
-  const { data: user, isLoading: userLoading } = useQuery({
-    queryKey: ["/api/auth/user"],
-    enabled: isAuthenticated,
-    retry: false,
-  });
-
-  if (isLoading || userLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>
-      </div>
-    );
-  }
-
   return (
     <Switch>
-      {!isAuthenticated ? (
-        <>
-          <Route path="/" component={EnhancedLanding} />
-          <Route path="/for-professionals" component={EnhancedForProfessionals} />
-          <Route path="/for-organizations" component={EnhancedForOrganizations} />
-          <Route path="/training" component={TrainingResources} />
-        </>
-      ) : !user?.userType ? (
-        <Route path="*" component={UserTypeSelection} />
-      ) : (
-        <>
-          <Route path="/" component={(user?.userType === 'professional') ? ProfessionalDashboard : OrganizationDashboard} />
-          <Route path="/profile" component={ProfessionalProfile} />
-          <Route path="/organization" component={OrganizationProfile} />
-          <Route path="/search" component={OrganizationSearch} />
-          <Route path="/deployments" component={DeploymentSearch} />
-          <Route path="/post-opportunity" component={PostOpportunity} />
-          <Route path="/professional/:id" component={ProfessionalDetails} />
-          <Route path="/messages" component={Messages} />
-          <Route path="/training" component={TrainingResources} />
-          <Route path="/settings" component={Settings} />
-          <Route path="/for-professionals" component={ForProfessionals} />
-          <Route path="/for-organizations" component={ForOrganizations} />
-        </>
-      )}
+      <Route path="/" component={EnhancedLanding} />
+      <Route path="/for-professionals" component={EnhancedForProfessionals} />
+      <Route path="/for-organizations" component={EnhancedForOrganizations} />
+      <Route path="/professional-demo" component={ProfessionalDashboard} />
+      <Route path="/organization-demo" component={OrganizationDashboard} />
+      <Route path="/profile" component={ProfessionalProfile} />
+      <Route path="/organization" component={OrganizationProfile} />
+      <Route path="/search" component={OrganizationSearch} />
+      <Route path="/deployments" component={DeploymentSearch} />
+      <Route path="/post-opportunity" component={PostOpportunity} />
+      <Route path="/professional/:id" component={ProfessionalDetails} />
+      <Route path="/messages" component={Messages} />
+      <Route path="/training" component={TrainingResources} />
+      <Route path="/settings" component={Settings} />
+      <Route path="/about" component={About} />
       <Route component={NotFound} />
     </Switch>
   );

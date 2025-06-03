@@ -19,8 +19,12 @@ import {
 import { Link } from "wouter";
 
 export default function EnhancedLanding() {
-  const handleSignIn = () => {
-    window.location.href = "/api/login";
+  const handleProfessionalDemo = () => {
+    window.location.href = "/professional-demo";
+  };
+
+  const handleOrganizationDemo = () => {
+    window.location.href = "/organization-demo";
   };
 
   return (
@@ -43,9 +47,23 @@ export default function EnhancedLanding() {
               <Link href="/for-organizations" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 For Organizations
               </Link>
-              <Button onClick={handleSignIn} className="bg-blue-600 hover:bg-blue-700">
-                Get Started
-              </Button>
+              <div className="flex items-center space-x-2">
+                <Button 
+                  onClick={handleProfessionalDemo}
+                  size="sm"
+                  className="bg-blue-600 hover:bg-blue-700"
+                >
+                  <UserRound className="h-4 w-4" />
+                </Button>
+                <Button 
+                  onClick={handleOrganizationDemo}
+                  size="sm"
+                  variant="outline"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-50"
+                >
+                  <Building className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -74,20 +92,21 @@ export default function EnhancedLanding() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button 
-                onClick={handleSignIn}
+                onClick={handleProfessionalDemo}
                 size="lg" 
                 className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3"
               >
-                Join as Healthcare Professional
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Explore as Professional
+                <UserRound className="ml-2 h-5 w-5" />
               </Button>
               <Button 
-                onClick={handleSignIn}
+                onClick={handleOrganizationDemo}
                 variant="outline" 
                 size="lg"
                 className="border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3"
               >
-                Register Organization
+                Explore as Organization
+                <Building className="ml-2 h-5 w-5" />
               </Button>
             </div>
 
@@ -294,12 +313,21 @@ export default function EnhancedLanding() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              onClick={handleSignIn}
+              onClick={handleProfessionalDemo}
               size="lg" 
               className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3"
             >
-              Start Your Journey Today
-              <ArrowRight className="ml-2 h-5 w-5" />
+              Explore Professional Dashboard
+              <UserRound className="ml-2 h-5 w-5" />
+            </Button>
+            <Button 
+              onClick={handleOrganizationDemo}
+              size="lg" 
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3"
+            >
+              Explore Organization Dashboard
+              <Building className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>
