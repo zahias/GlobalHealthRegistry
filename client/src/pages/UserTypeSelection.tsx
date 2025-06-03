@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { PublicNavigation } from "@/components/PublicNavigation";
+import { UnifiedNavigation } from "@/components/UnifiedNavigation";
 import { UserCheck, Building2, Stethoscope, Users, ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
 import { useMutation } from "@tanstack/react-query";
@@ -41,7 +41,7 @@ export default function UserTypeSelection() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
-      <PublicNavigation />
+      <UnifiedNavigation isPublic={true} />
       
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center mb-12">
