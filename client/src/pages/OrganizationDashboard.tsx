@@ -28,7 +28,7 @@ export default function OrganizationDashboard() {
   const profileData = mockOrganizationData.profileData;
   const activePostings = mockOrganizationData.activePostings;
   const applications = mockOrganizationData.applications;
-  const professionals = mockProfessionals;
+  const professionals = extendedMockProfessionals;
 
   const needsOnboarding = false;
   const hasProfile = true;
