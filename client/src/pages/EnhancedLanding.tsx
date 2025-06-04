@@ -323,8 +323,7 @@ export default function EnhancedLanding() {
             <Button 
               onClick={handleOrganizationDemo}
               size="lg" 
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-3"
+              className="bg-blue-700 text-white hover:bg-blue-800 border-2 border-white text-lg px-8 py-3"
             >
               Explore Organization Dashboard
               <Building className="ml-2 h-5 w-5" />

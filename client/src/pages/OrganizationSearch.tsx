@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ProfessionalCard } from "@/components/ProfessionalCard";
 import { useQuery } from "@tanstack/react-query";
 import { Search, Filter } from "lucide-react";
+import { extendedMockProfessionals } from "@/components/ExtendedMockData";
 
 interface SearchFilters {
   specialty: string;
