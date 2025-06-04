@@ -256,35 +256,35 @@ export default function EnhancedForProfessionals() {
                   <h3 className="text-2xl font-bold text-gray-900">Deploy with Confidence</h3>
                 </div>
                 <p className="text-lg text-gray-600 mb-6">
-                  Receive comprehensive pre-deployment support, cultural orientation, and ongoing assistance 
-                  throughout your mission. We ensure you're prepared and supported every step of the way.
+                  Connect directly with organizations and coordinate deployment details. We provide document 
+                  verification to ensure your credentials match your profile data for accurate representation.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-700">
                     <Shield className="h-5 w-5 text-red-600 mr-3" />
-                    Safety and security briefings
+                    Document verification service
                   </div>
                   <div className="flex items-center text-gray-700">
                     <Globe className="h-5 w-5 text-red-600 mr-3" />
-                    Cultural orientation training
+                    Direct organization connections
                   </div>
                   <div className="flex items-center text-gray-700">
                     <MessageSquare className="h-5 w-5 text-red-600 mr-3" />
-                    24/7 support during deployment
+                    Professional profile matching
                   </div>
                 </div>
               </div>
               <div className="lg:w-1/2">
                 <Card className="border-2 border-red-200 bg-red-50">
                   <CardContent className="p-8">
-                    <h4 className="text-lg font-semibold mb-4 text-red-900">Pre-Deployment Support:</h4>
+                    <h4 className="text-lg font-semibold mb-4 text-red-900">Platform Services:</h4>
                     <ul className="space-y-2 text-red-800">
-                      <li>• Comprehensive security briefings</li>
-                      <li>• Cultural sensitivity training</li>
-                      <li>• Medical equipment familiarization</li>
-                      <li>• Communication protocols setup</li>
-                      <li>• Emergency evacuation procedures</li>
-                      <li>• Mental health and wellness support</li>
+                      <li>• Document verification and credential matching</li>
+                      <li>• Profile accuracy confirmation</li>
+                      <li>• Direct messaging with organizations</li>
+                      <li>• Deployment opportunity matching</li>
+                      <li>• Professional network connections</li>
+                      <li>• Training resource access</li>
                     </ul>
                   </CardContent>
                 </Card>

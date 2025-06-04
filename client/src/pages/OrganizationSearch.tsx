@@ -35,14 +35,21 @@ export default function OrganizationSearch() {
 
   const [searchTriggered, setSearchTriggered] = useState(false);
 
-  const { data: professionals = [], isLoading, refetch } = useQuery({
-    queryKey: ["/api/professionals/search", filters],
-    enabled: searchTriggered,
-  });
+  // Use extended mock data for comprehensive demo experience
+  const professionals = searchTriggered ? 
+    extendedMockProfessionals.filter(prof => {
+      if (filters.specialty && !prof.specialties.some(s => s.toLowerCase().includes(filters.specialty.toLowerCase()))) return false;
+      if (filters.language && !prof.languages.some(l => l.toLowerCase().includes(filters.language.toLowerCase()))) return false;
+      if (filters.availability && prof.availabilityStatus.toLowerCase() !== filters.availability.toLowerCase()) return false;
+      if (filters.region && !prof.location.toLowerCase().includes(filters.region.toLowerCase())) return false;
+      if (filters.experience && prof.experience < parseInt(filters.experience)) return false;
+      if (filters.verified === "verified" && !prof.licenseVerified) return false;
+      return true;
+    }) : [];
+  const isLoading = false;
 
   const handleSearch = () => {
     setSearchTriggered(true);
-    refetch();
   };
 
   const handleFilterChange = (key: keyof SearchFilters, value: string) => {

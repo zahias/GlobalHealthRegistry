@@ -6,7 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { mockOrganizationData, mockProfessionals } from "@/components/MockDataProvider";
+import { mockOrganizationData } from "@/components/MockDataProvider";
+import { extendedMockProfessionals } from "@/components/ExtendedMockData";
 import { 
   Search, 
   Plus, 

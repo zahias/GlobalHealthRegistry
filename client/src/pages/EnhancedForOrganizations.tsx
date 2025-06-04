@@ -108,10 +108,10 @@ export default function EnhancedForOrganizations() {
             <Card className="border-green-200 bg-green-50 hover:shadow-lg transition-shadow">
               <CardContent className="p-8 text-center">
                 <Shield className="text-green-600 h-16 w-16 mx-auto mb-6" />
-                <h4 className="text-xl font-bold text-green-800 mb-4">Rigorous Verification</h4>
+                <h4 className="text-xl font-bold text-green-800 mb-4">Document Verification</h4>
                 <p className="text-green-700 leading-relaxed">
-                  Every healthcare professional undergoes comprehensive credential verification, background checks, 
-                  and competency assessments before joining our network.
+                  We verify that healthcare professionals' uploaded documents match their profile data 
+                  to ensure accurate credential representation in our network.
                 </p>
               </CardContent>
             </Card>
@@ -282,14 +282,14 @@ export default function EnhancedForOrganizations() {
               <div className="lg:w-1/2">
                 <Card className="border-2 border-red-200 bg-red-50">
                   <CardContent className="p-8">
-                    <h4 className="text-lg font-semibold mb-4 text-red-900">Deployment Support Includes:</h4>
+                    <h4 className="text-lg font-semibold mb-4 text-red-900">Platform Services Include:</h4>
                     <ul className="space-y-2 text-red-800">
-                      <li>• Pre-deployment briefing coordination</li>
-                      <li>• Cultural orientation and training</li>
-                      <li>• Documentation and visa assistance</li>
-                      <li>• On-ground support coordination</li>
-                      <li>• Emergency evacuation protocols</li>
-                      <li>• Post-deployment debriefing and follow-up</li>
+                      <li>• Professional credential verification</li>
+                      <li>• Direct messaging and communication tools</li>
+                      <li>• Opportunity posting and management</li>
+                      <li>• Professional search and filtering</li>
+                      <li>• Application tracking and management</li>
+                      <li>• Training resource access and sharing</li>
                     </ul>
                   </CardContent>
                 </Card>
